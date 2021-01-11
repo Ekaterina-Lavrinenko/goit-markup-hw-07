@@ -23,19 +23,21 @@
     cursor: pointer;
     padding: 6px 22px;
     transition: all 250ms var(--timing-fn);
+    
+      &:hover,
+      &:focus {
+        color: #ffffff;
+        background-color: #2196f3;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+         0px 2px 2px rgba(0, 0, 0, 0.12);
+      }
   }
   
-  .portfolio-button-item:not(:last-child) {
+  .portfolio-button-item {
+    &:not(:last-child) {
     margin-right: 8px;
-  }
-  
-  .portfolio-button:hover,
-  .portfolio-button:focus {
-    color: #ffffff;
-    background-color: #2196f3;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-      0px 2px 2px rgba(0, 0, 0, 0.12);
-  }
+    }
+}
   
   .portfolio-list {
     padding: 0;
@@ -45,12 +47,12 @@
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-set-gap));
     margin-top: calc(-1 * var(--card-set-gap));
-  }
   
-  .portfolio-list > .portfolio-list-item {
+    & > .portfolio-list-item {
     flex-basis: calc(100% / 3 - var(--card-set-gap));
     margin-left: var(--card-set-gap);
     margin-top: var(--card-set-gap); 
+    }
   }
     
   .portfolio-card-content {
@@ -58,9 +60,6 @@
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     overflow: hidden;
-  }
-  
-  .portfolio-card-content {
     padding: 20px 21px;
   }
   
@@ -85,20 +84,16 @@
   
   .portfolio-card { 
     transition: all 250ms var(--timing-fn);
-  }
+
   
-  .portfolio-card:hover,
-  .portfolio-card:focus {
+    &:hover,
+    &:focus {
     box-shadow: 
     0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06), 
     1px 4px 6px rgba(0, 0, 0, 0.16);
     display: block;
-  } 
-  
-  .portfolio-card:hover .portfolio-overlay,
-  .portfolio-card:focus .portfolio-overlay {
-    transform: translateY(0);
+    } 
   }
   
   .portfolio-card-thumb {
@@ -126,5 +121,10 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
     padding: 63px 24px;
+    
+    
+      .portfolio-card:hover &,
+      .portfolio-card:focus & {
+      transform: translateY(0);
+      }
   }
-  

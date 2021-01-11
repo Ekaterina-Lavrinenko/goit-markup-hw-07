@@ -21,24 +21,26 @@
     border-radius: 4px;
     background-color: #FFFFFF;
     transition: all 250ms var(--timing-fn);
+
+    &:hover,
+    &:focus {
+    border: 1px solid var(--accent-color);
+    }
   } 
   
-  .clients-list-item:not(:last-child) {
+  .clients-list-item {
+    &:not(:last-child) {
     margin-right: 30px;
-  }
+    }
+}
   
   .clients-list-icon {
     display: block;
     fill: #AFB1B8;
     transition: all 250ms var(--timing-fn);
-  }
   
-  .clients-link:hover,
-  .clients-link:focus {
-    border: 1px solid var(--accent-color);
-  }
-  
-  .clients-link:hover .clients-list-icon,
-  .clients-link:focus .clients-list-icon {
+    .clients-link:hover &,
+    .clients-link:focus & {
     fill: var(--accent-color);
-  }
+    }
+ }

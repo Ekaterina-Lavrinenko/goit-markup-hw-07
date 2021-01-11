@@ -45,20 +45,26 @@
     padding-top: 32px;
     padding-bottom: 32px;
     position: relative;
-  }
+    
+    .site-nav &.is-current,
+    &:hover,
+    &:focus{
+    color: var(--accent-color);
+    }
+ }
   
   .address-list {
     display: flex;
-  }
-  
-  .address-list-item:not(:last-child) {
-    margin-right: 50px;
   }
   
   .address-list-item {
     display: flex;
     justify-content: center;
     align-items: center;
+  
+    &:not(:last-child) {
+    margin-right: 50px;
+    }
   }
   
   .address-list-icon {
@@ -66,28 +72,15 @@
     fill: currentColor;
     margin-right: 10px;
     transition: fill 250ms var(--timing-fn);
-  }
    
-  .address-list-item:hover .address-list-icon,
-  .address-list-item:focus .address-list-icon, 
-  .address-list-item:active .address-list-icon{
+    .address-list-item:hover &,
+    .address-list-item:focus &, 
+    .address-list-item:active &{
     fill: var(--accent-color);
+    }
   }
   
-  .site-nav .nav-list-link.is-current,
-  .nav-list-link:hover,
-  .nav-list-link:focus,
-  .header-mail:hover,
-  .header-mail:focus,
-  .header-mail:active,
-  .header-phone:hover,
-  .header-phone:focus, 
-  .header-phone:active{
-    color: var(--accent-color);
-  }
-  
-  .header-mail,
-  .header-phone {
+  .header-mail {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +90,33 @@
     color: #757575;
     margin-left: 10px;
     transition: color 250ms var(--timing-fn);
-  }
+  
+ 
+    &:hover,
+    &:focus,
+    &:active{
+    color: var(--accent-color);
+    }
+   }
+  
+   .header-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+    color: #757575;
+    margin-left: 10px;
+    transition: color 250ms var(--timing-fn);
+  
+ 
+    &:hover,
+    &:focus,
+    &:active{
+    color: var(--accent-color);
+    }
+   }
   
   .is-current::after {
   content: '';
